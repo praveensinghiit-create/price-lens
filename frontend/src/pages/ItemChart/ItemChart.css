@@ -1,0 +1,7 @@
+.chart{
+    width: 50%;
+    margin-top: 40px;
+    margin-left: max(15vw,25px);
+    justify-content: center;   
+    border-radius: 5px;
+}

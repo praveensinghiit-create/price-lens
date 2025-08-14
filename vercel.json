@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "dest": "/api/run.py"
+    },
+    {
+      "source": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}

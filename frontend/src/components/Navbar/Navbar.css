@@ -1,0 +1,71 @@
+/* .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 4%;
+}
+.sa_log{
+    width: max(10%,60px);
+} */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 6px 4%;
+    background: #eaf8fb;
+    min-height: 80px;
+  }
+  
+  .sa_log {
+    width: 160px;
+    min-width: 130px;
+    height: 125px;
+    margin-right: 18px;
+  }
+  
+  .navbar-title {
+    font-size: 1.4em;
+    font-weight: 500;
+    color: #222;
+    line-height: 1.2;
+    flex: 1 1 auto;
+  }
+  
+  .gov-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .gov-subtitle {
+    font-size: 0.95em;
+    color: #555;
+    font-weight: 400;
+  }
+  
+  .navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .flag {
+    width: 200px;
+    min-width: 60px;
+    height: 60PX;
+  }
+  
+  .logout-btn {
+    padding: 0.5em 1em;
+    background: #e53e3e;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+    font-size: 1em;
+  }
+  .logout-btn:hover {
+    background: #c53030;
+  }
+  

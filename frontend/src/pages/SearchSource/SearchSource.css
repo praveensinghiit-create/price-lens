@@ -1,0 +1,284 @@
+/* SearchSource.css */
+
+/* Root container: full viewport, center everything */
+.ss-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(110deg, #f7f7fa 60%, #e6e5f8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Main content area: center, card look */
+.ss-main {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.09);
+  padding: 32px 32px 24px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+/* Title styling */
+.ss-header {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-align: center;
+  color: #1976d2;
+  letter-spacing: 1px;
+}
+
+/* Form styling */
+.ss-form {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 28px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 20px 18px 10px 18px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.05);
+  display: flex;
+  gap: 16px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ss-form-group {
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+
+.ss-form-group label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #1976d2;
+  font-size: 1rem;
+}
+
+.ss-form-group input[type="text"],
+.ss-form-group input[type="url"] {
+  padding: 7px 10px;
+  border: 1.5px solid #b0c4d6;
+  border-radius: 5px;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.18s;
+}
+
+.ss-form-group input[type="text"]:focus,
+.ss-form-group input[type="url"]:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+}
+
+.ss-add-btn {
+  padding: 9px 22px;
+  border-radius: 24px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 120px;
+  transition: background 0.15s;
+}
+.ss-add-btn:hover {
+  background: #1251a3;
+}
+
+/* Table styling */
+.ss-table-container {
+  width: 100%;
+  max-height: 340px; /* Adjust as needed */
+  overflow-y: auto;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(34,67,106,0.06);
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.ss-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 0.96rem; /* Slightly smaller for compactness */
+  margin: 0 auto;
+}
+
+.ss-table th,
+.ss-table td {
+  padding: 7px 6px; /* Reduced padding for more rows per view */
+  border-bottom: 1.5px solid #e3edfa;
+  white-space: nowrap; /* Prevents text wrapping for compact look */
+  text-align: left;
+}
+
+.ss-table th {
+  background: #e3edfa;
+  color: #1976d2;
+  font-weight: 700;
+  font-size: 1.01rem;
+  position: sticky; /* Sticky header for better usability */
+  top: 0;
+  z-index: 2;
+  text-align: left;
+}
+
+.ss-table td.ss-table-center {
+  text-align: center;
+}
+
+
+/* ToggleSwitch styling (for enable/disable) */
+.ss-toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: 44px;
+  height: 24px;
+}
+.ss-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.ss-toggle-track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 24px;
+  border-radius: 12px;
+  background: #ccc;
+  transition: background 0.2s;
+}
+.ss-toggle-switch input:checked + .ss-toggle-track {
+  background: #1976d2;
+}
+.ss-toggle-thumb {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: left 0.2s;
+  border: 1px solid #ddd;
+}
+.ss-toggle-switch input:checked + .ss-toggle-track + .ss-toggle-thumb {
+  left: 24px;
+}
+
+/* Delete button styling */
+.ss-delete-btn {
+  background: #ffebee;
+  color: #d32f2f;
+  border: 1px solid #ffcdd2;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(229,57,53,0.08);
+  transition: background 0.18s, color 0.18s;
+}
+.ss-delete-btn:hover,
+.ss-delete-btn:focus {
+  background: #d32f2f;
+  color: #fff;
+  border-color: #d32f2f;
+}
+
+/* Action buttons row */
+.ss-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.ss-btn {
+  padding: 10px 28px;
+  border-radius: 24px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  min-width: 120px;
+  transition: background 0.15s;
+}
+.ss-btn.ss-cancel {
+  background: #eee;
+  color: #1976d2;
+}
+.ss-btn.ss-cancel:hover {
+  background: #1976d2;
+  color: #fff;
+}
+.ss-btn.ss-save:hover {
+  background: #1251a3;
+  color: #fff;
+}
+
+.ss-btn.ss-x {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e53935;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  transition: background 0.15s;
+}
+.ss-btn.ss-x:hover {
+  background: #b71c1c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+  .ss-main {
+    padding: 10px 2vw;
+    margin: 20px 0;
+  }
+  .ss-table {
+    font-size: 0.97rem;
+  }
+  .ss-form {
+    max-width: 100%;
+    padding: 14px 4px 8px 4px;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .ss-btn-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
