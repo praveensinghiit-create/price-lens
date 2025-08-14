@@ -5,4 +5,3 @@ export default defineConfig({
   base: "/", // ✅ Important for Nginx root deployments
   plugins: [react()],
 });
-ß;
